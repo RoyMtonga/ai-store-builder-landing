@@ -46,4 +46,7 @@ async function start() {
   console.log(`TRPC server listening at port: ${port}`);
 }
 
-start();
+// Only start server if this file is run directly
+if (require.main === module) {
+  start();
+}
